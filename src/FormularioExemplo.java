@@ -45,6 +45,14 @@ public class FormularioExemplo extends JFrame {
 
             JOptionPane.showMessageDialog(this, msg, "Dados Salvos", JOptionPane.INFORMATION_MESSAGE);
         });
+
+        btnLimpar.addActionListener(e-> {
+            tfNome.setText(""); tfEmail.setText(""); tfIdade.setText("");
+        });
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new FormularioExemplo().setVisible(true));
     }
 
 }
